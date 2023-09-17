@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="portfolio.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo">JLPT &copy;</div>
+
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+            <!-- USING CHECKBOX HACK -->
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+            <!-- NAVIGATION MENUS -->
+            <div class="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/">Portfolio</a></li>
+                <li><a href="/">Contact</a></li>
+            </div>
+        </ul>
+    </nav>
+
+    <div class="carousel-container">
+        <img src="" alt="Image" class="carousel-image" id="carousel-image">
+        <p class="carousel-text" id="carousel-text">Text for Image</p>
+    </div>
+
+    <div class="upcoming-projects">
+        <h2>Upcoming Projects</h2>
+        <ul>
+            <li>Project 1</li>
+            <li>Project 2</li>
+            <li>Project 3</li>
+            <!-- Add more upcoming projects here -->
+        </ul>
+    </div>
+    
+    <script>
+        // JavaScript to implement the carousel
+        const imagesAndTexts = [
+            { image: "image/image1.gif", text: "Title:<br> Java based Database Management System -- Project for JAVA Subject: Object Oriented Programming <br> Description: <br> Programming Language based on Java that can store information using a database with an external application." },
+            { image: "image/image2.jpg", text: "Title: <br> Responsive Login Page Based on HTML and CSS <br> Description: <br> A webpage based around CSS and HTML with subtle Javascript that acts as a Login Page <br> for website creation training." },
+            { image: "image3.jpg", text: "Text for Image 3" },
+            // Add more objects for additional images and text
+        ];
+
+        let currentIndex = 0;
+
+        function changeImage() {
+        const imageElement = document.getElementById("carousel-image");
+        const textElement = document.getElementById("carousel-text");
+        imageElement.src = imagesAndTexts[currentIndex].image;
+        textElement.innerHTML = imagesAndTexts[currentIndex].text;
+        currentIndex = (currentIndex + 1) % imagesAndTexts.length;
+        }
+
+        // Call changeImage function every 7 seconds
+        setInterval(changeImage, 4000);
+
+        // Initial image load
+        changeImage();
+    </script>
+
+<footer class="footer">
+    <p>&copy; 2023 jlfx09 <br> All Copyrights Reserved.</p>
+</footer>
+
+</body>
+</html>
