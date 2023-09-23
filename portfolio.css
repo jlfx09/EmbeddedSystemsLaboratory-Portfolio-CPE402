@@ -84,7 +84,7 @@
 }
 
 .upcoming-projects {
-  background-color: #f4f4f4; /* Background color for the upcoming projects section */
+  background-image: linear-gradient(to bottom, #469696, #008080); /* Adjust the background color as needed */
   padding: 75px;
   text-align: center;
   margin-top: 120px; /* Adjust the margin-top value as desired */
@@ -131,31 +131,68 @@ input[type=checkbox] {
   
   /* APPLYING MEDIA QUERIES */
   @media (max-width: 768px) {
-   .menu {
-      display:none;
-      position: absolute;
-      background-color:teal;
-      right: 0;
-      left: 0;
-      text-align: center;
-      padding: 16px 0;
-    }
-  
-    .menu li:hover {
-      display: inline-block;
-      background-color:#4c9e9e;
-      transition: 0.3s ease;
-    }
-  
-    .menu li + li {
-      margin-top: 12px;
-    }
-  
-    input[type=checkbox]:checked ~ .menu {
-      display: block;
-    }
-  
-    .hamburger {
-      display: block;
-    }
-}
+    .menu {
+       display: none;
+       position: fixed; /* Use 'fixed' for centering */
+       top: 50%; /* Move it 50% from the top */
+       left: 0;
+       right: 0;
+       transform: translateY(-50%); /* Center vertically */
+       background-color: teal;
+       text-align: center;
+       padding: 16px 0;
+       z-index: 999; /* Ensure it's above other content */
+     }
+   
+     .menu li:hover {
+       display: inline-block;
+       background-color: #4c9e9e;
+       transition: 0.3s ease;
+     }
+   
+     .menu li + li {
+       margin-top: 12px;
+     }
+   
+     input[type=checkbox]:checked ~ .menu {
+       display: block;
+     }
+   
+     .hamburger {
+       display: block;
+     }
+ 
+   .carousel-text {
+     justify-content: center; /* Center text horizontally */
+     align-items: center; /* Center text vertically */
+     padding-left: 10px; /* Adjust padding for even smaller screens */
+     padding-right: 10px; /* Adjust padding for even smaller screens */
+     font-size: 12px;
+   }
+ 
+   .carousel-image {
+     max-width: 50%; /* Limit the width */
+     max-height: 50%; /* Limit the height */
+     height: auto; /* Maintain aspect ratio */
+     border: 2px solid black;
+     border-radius: 15%;
+     padding-right: 10px;
+     padding-left: 10px;
+     display: block; /* Ensure the image is centered */
+     margin: 0 auto; /* Center the image horizontally */
+ } 
+   
+   .upcoming-projects {
+       padding: 20px; /* Further adjust padding for very small screens */
+       margin-top: 40px; /* Further adjust margin-top for very small screens */
+   }
+   
+   .upcoming-projects h2 {
+       font-size: 18px; /* Further adjust font size for very small screens */
+   }
+   
+   .upcoming-projects li {
+       font-size: 14px; /* Further adjust font size for very small screens */
+   }
+ }
+ 
