@@ -260,6 +260,7 @@ max-width: 25%; /* Adjust the image size as needed */
 height: 25%; /* Maintain aspect ratio */
 border: 2px solid black;
 margin-right: 150px; /* Adjust the margin as needed to move the image closer to the text */
+border-radius: 50%;
 }
 
 .text {
@@ -413,6 +414,7 @@ input[type=checkbox] {
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
+  border-radius: 50%;
 }
 
 .ProgrammingSection {

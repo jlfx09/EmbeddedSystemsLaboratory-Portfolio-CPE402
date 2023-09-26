@@ -130,21 +130,19 @@ input[type=checkbox] {
   
   /* APPLYING MEDIA QUERIES */
   @media (max-width: 768px) {
-   .menu {
-      display:none;
-      position: absolute;
-      background-color:teal;
-      right: 0;
-       transform: translateY(-50%); /* Center vertically */
-       background-color: teal;
+    .menu {
+       display:none;
+       position: absolute;
+       background-color:teal;
+       right: 0;
+       left: 0;
        text-align: center;
        padding: 16px 0;
-       z-index: 999; /* Ensure it's above other content */
-    }
-  
-    .menu li:hover {
-      display: inline-block;
-       background-color: #4c9e9e;
+     }
+   
+     .menu li:hover {
+       display: inline-block;
+       background-color:#4c9e9e;
        transition: 0.3s ease;
      }
    
